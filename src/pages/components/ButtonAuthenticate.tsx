@@ -35,7 +35,9 @@ export const ButtonAuthenticate = () => {
       ) : status === "authenticated" ? (
         <>
           <Avatar source={data.user!.image!} /> <span>{data.user?.name}</span>
-          <SignOut size={24} weight="fill" />
+          <span className="block w-0 opacity-0 transition-all group-hover:w-6 group-hover:opacity-100">
+            <SignOut size={24} weight="fill" />
+          </span>
         </>
       ) : (
         <CircleNotch size={32} className="animate-spin" />
