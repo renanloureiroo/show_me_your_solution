@@ -10,5 +10,36 @@
   "linked_documents": [],
   "lang": "en-us",
   "alternate_languages": [],
-  "data": {}
+  "data": {
+    "title": "independent",
+    "description": [
+      {
+        "type": "paragraph",
+        "text": "Officia mollit est deserunt proident enim do cupidatat dolore sunt consequat magna Lorem aute non. Ex proident officia sint fugiat occaecat esse cillum velit duis deserunt id.",
+        "spans": []
+      }
+    ],
+    "challenger_in_course": {
+      "link_type": "Web",
+      "url": "https://slicemachine.dev"
+    },
+    "thumbnail": {
+      "dimensions": {
+        "width": 900,
+        "height": 500
+      },
+      "alt": null,
+      "copyright": null,
+      "url": "https://images.unsplash.com/photo-1547394765-185e1e68f34e"
+    },
+    "banner": {
+      "dimensions": {
+        "width": 900,
+        "height": 500
+      },
+      "alt": null,
+      "copyright": null,
+      "url": "https://images.unsplash.com/photo-1547394765-185e1e68f34e"
+    }
+  }
 }
