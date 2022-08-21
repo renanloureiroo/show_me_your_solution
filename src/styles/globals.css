@@ -2,7 +2,13 @@
 @tailwind components;
 @tailwind utilities;
 
-html, body {
-  background: theme('colors.gray.900');
-  color: theme('colors.gray.300');
+html,
+body {
+  background: theme("colors.gray.900");
+  color: theme("colors.gray.400");
+}
+
+h1 {
+  color: theme("colors.gray.200");
+  font-size: theme("fontSize.4xl");
 }

@@ -4,6 +4,7 @@ import { createClient } from "../../prismic";
 import { useState } from "react";
 import { ChallengerType } from "../models/Challenger";
 import { CardChallenger } from "./components/CardChallenger";
+import { prismicClient } from "../services/prismicClient";
 
 interface HomeProps {
   challengers: ChallengerType[];
@@ -36,9 +37,7 @@ const Home: NextPage<HomeProps> = ({ challengers }) => {
 };
 
 export const getStaticProps: GetStaticProps = async () => {
-  const client = createClient({});
-
-  const response = await client.getAllByType("challenger");
+  const response = await prismicClient.getAllByType("challenger");
 
   const challengers = response.map((challenger) => {
     return {
@@ -64,6 +63,7 @@ export const getStaticProps: GetStaticProps = async () => {
     props: {
       challengers,
     },
+    revalidate: 60 * 60 * 24, // 1 day
   };
 };
 
