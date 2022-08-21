@@ -10,5 +10,30 @@
   "linked_documents": [],
   "lang": "en-us",
   "alternate_languages": [],
-  "data": {}
+  "data": {
+    "title": "pay",
+    "challenger_in_course": {
+      "link_type": "Web",
+      "url": "http://twitter.com"
+    },
+    "thumbnail": {
+      "dimensions": {
+        "width": 900,
+        "height": 500
+      },
+      "alt": null,
+      "copyright": null,
+      "url": "https://images.unsplash.com/photo-1606248897732-2c5ffe759c04"
+    },
+    "banner": {
+      "dimensions": {
+        "width": 900,
+        "height": 500
+      },
+      "alt": null,
+      "copyright": null,
+      "url": "https://images.unsplash.com/photo-1593642633279-1796119d5482"
+    },
+    "description": "heart"
+  }
 }

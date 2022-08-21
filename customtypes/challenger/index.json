@@ -4,6 +4,52 @@
   "repeatable": true,
   "status": true,
   "json": {
-    "Main": {}
+    "Main": {
+      "uid": {
+        "type": "UID",
+        "config": {
+          "label": "slug",
+          "placeholder": ""
+        }
+      },
+      "title": {
+        "type": "Text",
+        "config": {
+          "label": "title",
+          "placeholder": ""
+        }
+      },
+      "challenger_in_course": {
+        "type": "Link",
+        "config": {
+          "label": "challenger_in_course",
+          "placeholder": "",
+          "select": null
+        }
+      },
+      "thumbnail": {
+        "type": "Image",
+        "config": {
+          "label": "thumbnail",
+          "constraint": {},
+          "thumbnails": []
+        }
+      },
+      "banner": {
+        "type": "Image",
+        "config": {
+          "label": "banner",
+          "constraint": {},
+          "thumbnails": []
+        }
+      },
+      "description": {
+        "type": "Text",
+        "config": {
+          "label": "description",
+          "placeholder": ""
+        }
+      }
+    }
   }
 }
