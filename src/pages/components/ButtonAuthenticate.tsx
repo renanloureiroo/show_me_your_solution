@@ -21,21 +21,29 @@ export const ButtonAuthenticate = () => {
           ? handleSignOut
           : () => {}
       }
-      className=" group flex items-center gap-2 h-12 px-4 rounded-full cursor-pointer font-bold bg-teal-900 hover:bg-teal-700 transition-colors"
-    >
+      className="
+            group 
+            flex 
+            items-center 
+            gap-2 
+            h-12 
+            px-4 
+            rounded-full 
+            cursor-pointer 
+            font-bold 
+            text-bastille-900
+            bg-gradient-to-r from-[#00b5d4] via-[#00a8c5] to-blue
+            hover:text-white 
+            transition-colors
+        ">
       {status === "unauthenticated" ? (
         <>
-          <GithubLogo
-            size={32}
-            weight="fill"
-            className="group-hover:text-gray-50"
-          />
-          Login com Github
+          Login
         </>
-      ) : status === "authenticated" ? (
+      )  : status === "authenticated" ? (
         <>
           <Avatar source={data.user!.image!} /> <span>{data.user?.name}</span>
-          <SignOut size={24} weight="fill" />
+          <SignOut size={24} weight="fill"  />
         </>
       ) : (
         <CircleNotch size={32} className="animate-spin" />

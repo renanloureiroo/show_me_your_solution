@@ -6,7 +6,7 @@ import { Header } from "./components/Header";
 function MyApp({ Component, pageProps: { session, ...pageProps } }: AppProps) {
   return (
     <SessionProvider session={session}>
-      <div className="bg-blur bg-cover bg-no-repeat bg-bottom  h-screen">
+      <div className="bg-blur  bg-no-repeat  h-screen bg-cover md:bg-bottom">
         <Header />
         <Component {...pageProps} />
       </div>
