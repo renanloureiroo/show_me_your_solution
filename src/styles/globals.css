@@ -3,6 +3,7 @@
 @tailwind utilities;
 
 html, body {
-  background: theme('colors.gray.900');
+  background: theme('colors.bastille.800');
   color: theme('colors.gray.300');
 }
+
