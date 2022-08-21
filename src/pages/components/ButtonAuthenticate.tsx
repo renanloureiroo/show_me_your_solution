@@ -14,9 +14,14 @@ export const ButtonAuthenticate = () => {
   };
   return (
     <button
-      onClick={handleSignIn}
-      disabled={status === "authenticated"}
-      className=" group flex items-center gap-2 h-12 px-4 rounded-full font-bold bg-teal-900 hover:bg-teal-700 transition-colors"
+      onClick={
+        status == "unauthenticated"
+          ? handleSignIn
+          : status === "authenticated"
+          ? handleSignOut
+          : () => {}
+      }
+      className=" group flex items-center gap-2 h-12 px-4 rounded-full cursor-pointer font-bold bg-teal-900 hover:bg-teal-700 transition-colors"
     >
       {status === "unauthenticated" ? (
         <>
@@ -30,12 +35,7 @@ export const ButtonAuthenticate = () => {
       ) : status === "authenticated" ? (
         <>
           <Avatar source={data.user!.image!} /> <span>{data.user?.name}</span>
-          <button
-            onClick={handleSignOut}
-            className="w-0 opacity-0 transition-all group-hover:w-6 group-hover:opacity-100"
-          >
-            <SignOut size={24} weight="fill" />
-          </button>
+          <SignOut size={24} weight="fill" />
         </>
       ) : (
         <CircleNotch size={32} className="animate-spin" />
