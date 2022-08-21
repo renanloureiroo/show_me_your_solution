@@ -11,17 +11,10 @@
   "lang": "en-us",
   "alternate_languages": [],
   "data": {
-    "title": "independent",
-    "description": [
-      {
-        "type": "paragraph",
-        "text": "Officia mollit est deserunt proident enim do cupidatat dolore sunt consequat magna Lorem aute non. Ex proident officia sint fugiat occaecat esse cillum velit duis deserunt id.",
-        "spans": []
-      }
-    ],
+    "title": "pay",
     "challenger_in_course": {
       "link_type": "Web",
-      "url": "https://slicemachine.dev"
+      "url": "http://twitter.com"
     },
     "thumbnail": {
       "dimensions": {
@@ -30,7 +23,7 @@
       },
       "alt": null,
       "copyright": null,
-      "url": "https://images.unsplash.com/photo-1547394765-185e1e68f34e"
+      "url": "https://images.unsplash.com/photo-1606248897732-2c5ffe759c04"
     },
     "banner": {
       "dimensions": {
@@ -39,7 +32,8 @@
       },
       "alt": null,
       "copyright": null,
-      "url": "https://images.unsplash.com/photo-1547394765-185e1e68f34e"
-    }
+      "url": "https://images.unsplash.com/photo-1593642633279-1796119d5482"
+    },
+    "description": "heart"
   }
 }
