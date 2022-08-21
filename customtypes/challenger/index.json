@@ -1,0 +1,9 @@
+{
+  "id": "challenger",
+  "label": "challenger",
+  "repeatable": true,
+  "status": true,
+  "json": {
+    "Main": {}
+  }
+}
