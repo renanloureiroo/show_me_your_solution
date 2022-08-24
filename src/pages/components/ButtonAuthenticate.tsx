@@ -1,7 +1,9 @@
 import { useSession, signOut, signIn } from "next-auth/react";
-import { CircleNotch, GithubLogo, SignOut } from "phosphor-react";
+import { CircleNotch, SignOut } from "phosphor-react";
+import Image from "next/image";
 
 import { Avatar } from "./Avatar";
+
 
 export const ButtonAuthenticate = () => {
   const { status, data } = useSession();
@@ -21,16 +23,30 @@ export const ButtonAuthenticate = () => {
           ? handleSignOut
           : () => {}
       }
-      className=" group flex items-center gap-2 h-12 px-4 rounded-full cursor-pointer font-bold bg-teal-900 hover:bg-teal-700 transition-colors"
-    >
+      className="w-24
+        flex 
+        items-center
+        pt-3
+    ">
       {status === "unauthenticated" ? (
         <>
-          <GithubLogo
-            size={32}
-            weight="fill"
-            className="group-hover:text-gray-50"
-          />
-          Login com Github
+
+            <Image
+              src="/github-strock-white.svg"
+              width={29}
+              height={29}
+              alt="Logo GitHub"
+            />
+            <span
+            className="
+              text-xl
+              font-roboto
+              leading-4
+            " 
+            >
+              Login
+            </span>
+  
         </>
       ) : status === "authenticated" ? (
         <>

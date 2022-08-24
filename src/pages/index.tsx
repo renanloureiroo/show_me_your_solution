@@ -1,70 +1,44 @@
-import type { GetStaticProps, NextPage } from "next";
+
 import Head from "next/head";
-import { createClient } from "../../prismic";
-import { useState } from "react";
-import { ChallengerType } from "../models/Challenger";
-import { CardChallenger } from "./components/CardChallenger";
-import { prismicClient } from "../services/prismicClient";
+import Image from "next/image"
+import { Header } from "./components/Header";
 
-interface HomeProps {
-  challengers: ChallengerType[];
-}
 
-const Home: NextPage<HomeProps> = ({ challengers }) => {
-  const [data] = useState<ChallengerType[]>(challengers);
-
-  return (
+export default function Home(){
+  return(
     <>
       <Head>
-        <title>Show Me Your Solution | Home</title>
+
       </Head>
-      <div>
-        <h1>Show me your solution</h1>
-        <main className="flex w-full max-w-5xl mx-auto">
-          {data.map((challenger) => (
-            <CardChallenger
-              key={challenger.id}
-              data={{
-                ...challenger,
-                image: challenger.thumbnail,
-              }}
-            />
-          ))}
-        </main>
+      <div className="w-full h-screen bg-blur-desktop bg-no-repeat space-y-20">
+        <Header />
+        <div className="w-full">
+          <div className="flex flex-col justify-center items-center text-center  space-y-2">
+            <span className="font-roboto tracking-[0.4rem]  font-normal text-xs">BEM-VINDOS(A) AO👋</span>
+            <div className="flex flex-col">
+              <h1 className="font-space font-bold tracking-widest text-6xl shadow-1">Show me</h1>
+              <h3 className="font-roboto font-normal tracking-[0.39rem] text-2xl leading-3 shadow-2 text-white">Your solution</h3>
+            </div>
+            <div className="w-[400px] h-44 flex items-center">
+                <p className="px-4 tracking-[0.16rem]  font-roboto font-normal text-sm">
+                  No Show Me Your Solution, 
+                  ficou mais facil de você 
+                  compartilhar todos os seu 
+                  desafios e exercícios 
+                  com a comunidade da CodarMe.
+                </p>
+            </div>
+          </div>
+          <div className="w-full flex justify-center  ">
+            <Image src="/team-home-mobile.svg" alt="Team" width={414} height={394} />
+          </div>
+        </div>
+        <footer className="h-14 bg-bastille-900 flex items-center justify-center shadow-lg shadow-cyan-500/50 ">
+            <Image src='/codarme-commuty-logo.svg' alt="Logo codarme" width={100} height={40}/>
+        </footer>
       </div>
+
+
     </>
-  );
-};
-
-export const getStaticProps: GetStaticProps = async () => {
-  const response = await prismicClient.getAllByType("challenger");
-
-  const challengers = response.map((challenger) => {
-    return {
-      id: challenger.id,
-      slug: challenger.slugs[0],
-      title: challenger.data.title,
-      description: challenger.data.description,
-      banner: {
-        url: challenger.data.banner.url,
-        alt: challenger.data.banner.alt,
-        width: challenger.data.banner.dimensions.width,
-        height: challenger.data.banner.dimensions.height,
-      },
-      thumbnail: {
-        url: challenger.data.thumbnail.url,
-        alt: challenger.data.thumbnail.alt,
-        ...challenger.data.thumbnail.dimensions,
-      },
-      challenger_in_course: challenger.data.challenger_in_course,
-    } as ChallengerType;
-  });
-  return {
-    props: {
-      challengers,
-    },
-    revalidate: 60 * 60 * 24, // 1 day
-  };
-};
-
-export default Home;
+  )
+}

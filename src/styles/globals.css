@@ -6,9 +6,19 @@ html,
 body {
   background: theme("colors.gray.900");
   color: theme("colors.gray.400");
+  text-shadow: ;
 }
 
 h1 {
   color: theme("colors.gray.200");
   font-size: theme("fontSize.4xl");
 }
+
+.shadow-1{
+  text-shadow: 0px 2px 10px rgba(0, 0, 0, 0.5);
+}
+.shadow-2{
+  text-shadow: 0px -5px 6px rgba(0, 0, 0, 0.25);
+}
+
+
