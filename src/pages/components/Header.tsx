@@ -1,4 +1,3 @@
-import Image from "next/image";
 import Link from "next/link";
 import { ButtonAuthenticate } from "./ButtonAuthenticate";
 import { Logo } from "./Logo";
