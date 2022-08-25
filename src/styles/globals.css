@@ -13,6 +13,10 @@ h1 {
   font-size: theme("fontSize.4xl");
 }
 
+
+.sea{
+  background: linear-gradient(135deg, #00D9C0 0%, #00CBCB 35.4%, #00BCD8 69.8%, #00A8E8 100% );
+}
 /* .shadow-1{
   text-shadow: 0px 2px 10px rgba(0, 0, 0, 0.5);
 }
