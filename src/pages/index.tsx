@@ -1,8 +1,6 @@
 
 import Head from "next/head";
 import Image from "next/image"
-import { Header } from "./components/Header";
-
 
 export default function Home(){
   return(
@@ -11,13 +9,13 @@ export default function Home(){
 
       </Head>
       <div className="w-full h-screen bg-blur-desktop bg-no-repeat space-y-20">
-        <Header />
+     
         <div className="w-full">
-          <div className="flex flex-col justify-center items-center text-center  space-y-2">
+          <div className="flex flex-col justify-center items-center text-center space-y-2">
             <span className="font-roboto tracking-[0.4rem]  font-normal text-xs">BEM-VINDOS(A) AO👋</span>
             <div className="flex flex-col">
-              <h1 className="font-space font-bold tracking-widest text-6xl shadow-1">Show me</h1>
-              <h3 className="font-roboto font-normal tracking-[0.39rem] text-2xl leading-3 shadow-2 text-white">Your solution</h3>
+              <h1 className="font-space font-bold tracking-widest text-6xl">Show me</h1>
+              <h3 className="font-roboto font-normal tracking-[0.39rem] text-2xl leading-3text-white">Your solution</h3>
             </div>
             <div className="w-[400px] h-44 flex items-center">
                 <p className="px-4 tracking-[0.16rem]  font-roboto font-normal text-sm">
