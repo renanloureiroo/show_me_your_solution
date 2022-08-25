@@ -17,7 +17,7 @@ export const CardChallenger = ({ data }: CardChallengerProps) => {
     <Link href={`/challengers/${data.id}`}>
       <div className="rounded-lg sea cursor-pointer shadow-xl border  border-zinc-700 hover:border-green hover:-translate-y-1 hover:scale-110 duration-300">
         
-        <div className="flex justify-center ">
+        <div className="flex justify-center">
             <Image
               className="w-full z-20 rounded-tl-[66px] rounded-br-[77px] rounded-md"
               src={data.image.url}
