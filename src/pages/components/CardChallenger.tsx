@@ -15,16 +15,22 @@ interface CardChallengerProps {
 export const CardChallenger = ({ data }: CardChallengerProps) => {
   return (
     <Link href={`/challengers/${data.id}`}>
-      <div className="rounded-lg px-2 py-3 bg-gray-800 cursor-pointer">
-        <Image
-          src={data.image.url}
-          width={data.image.width}
-          height={data.image.height}
-          alt={data.image.alt}
-          layout="fixed"
-        />
-        <h1>{data.title}</h1>
-        <p>{data.description}</p>
+      <div className="rounded-lg sea cursor-pointer shadow-xl border  border-zinc-700 hover:border-green hover:-translate-y-1 hover:scale-110 duration-300">
+        
+        <div className="flex justify-center">
+            <Image
+              className="w-full z-20 rounded-tl-[66px] rounded-br-[77px] rounded-md"
+              src={data.image.url}
+              // width={311}
+              // height={174}
+              width={data.image.width}
+              height={data.image.height}
+              alt={data.image.alt}
+              layout="fixed"
+            />
+        </div>
+        {/* <h1>{data.title}</h1>
+        <p>{data.description}</p> */}
       </div>
     </Link>
   );
