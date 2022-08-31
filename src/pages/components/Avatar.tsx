@@ -5,7 +5,7 @@ interface AvatarProps {
 
 export const Avatar = ({ source }: AvatarProps) => {
   return (
-    <div className="h-8 w-8 flex items-center justify-center rounded-full  overflow-hidden">
+    <div className="h-8 w-8 m-2 flex items-center justify-center rounded-full  overflow-hidden border border-gray-700">
       <Image
         className="rounded-full overflow-hidden"
         src={source!}
