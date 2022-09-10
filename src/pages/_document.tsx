@@ -13,7 +13,7 @@ export default function Document() {
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin='true' />
         <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap" rel="stylesheet"></link>
       </Head>
-      <body className="bg-blur-desktop  bg-center bg-cover">
+      <body className="bg-blur-desktop  bg-center  bg-cover">
         <Main />
         <NextScript />
       </body>
