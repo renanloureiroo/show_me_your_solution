@@ -8,8 +8,6 @@ export default function Home(){
       <Head>
         <title>Show me your solution</title>
       </Head>
-
-
     </>
   )
 }
