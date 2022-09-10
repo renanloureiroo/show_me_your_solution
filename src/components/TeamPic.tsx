@@ -2,7 +2,6 @@ interface TeamPictureProps {
     width?: number,
     height?: number,
 }
-
 export const TeamPicture = ({width, height}: TeamPictureProps) =>(
     <svg className="w-[400px] h-[100] lg:w-[700px] lg:h-[700]" viewBox="0 0 687 557" fill="none">
 	<path
