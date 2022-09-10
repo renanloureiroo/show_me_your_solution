@@ -8,7 +8,7 @@ export default function Home(){
       <Head>
         <title>Show me your solution</title>
       </Head>
-      <main className="pt-40 mb-10 h-screen mx-auto container flex flex-col text-center  lg:flex-row lg:text-start lg:items-center lg:pt-24">
+      <main className="pt-40 pl-12 mb-10 h-screen mx-auto container flex flex-col text-center  lg:flex-row lg:text-start lg:items-center lg:pt-24">
         
         <div className="flex-1 space-y-7 ">
 
@@ -29,7 +29,7 @@ export default function Home(){
 
         </div>
 
-        <div className="flex items-center justify-center lg:w-5/12">
+        <div className="flex items-center justify-center lg:w-6/12">
             <TeamPicture />
         </div>
 

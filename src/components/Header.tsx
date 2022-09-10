@@ -1,7 +1,8 @@
-
 import { ButtonAuthenticate } from "./ButtonAuthenticate";
-import { Avatar } from "./Avatar";
+
 import { LogoInput } from "./Logo";
+import { MenuUser } from "./MenuUser";
+
 export const Header = () => {
 	return (
 		<header className="w-full transition-all  absolute ">
@@ -11,7 +12,7 @@ export const Header = () => {
 				</div>
 
 				<div className="flex w-20 justify-between">
-					<Avatar width={40} height={40} />
+					<MenuUser />
 					<ButtonAuthenticate />
 				</div>
 			</div>

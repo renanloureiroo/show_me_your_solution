@@ -26,6 +26,7 @@ export const Avatar = ({ width, height }: AvatarProps) => {
 
   return(
     <>
+    
     </>
   )
 };

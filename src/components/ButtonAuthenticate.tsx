@@ -6,13 +6,13 @@ import style from "./Style";
 
 export const ButtonAuthenticate = () => {
   const { status, data } = useSession();
-  console.log(style.button)
+
   return (
-		<button>
+		<button className="flex items-center jus">
 			{status === "unauthenticated" ? (
-				<SignIn onClick={() => signIn()} size={32} className={style.button}/>
+				<SignIn onClick={() => signIn()} size={22} className={style.button} />
 			) : status === "authenticated" ? (
-				<SignOut onClick={() => signOut()} size={32} className={style.button}/>
+				<SignOut  onClick={() => signOut()} size={22} className={style.button}/>
 			) : (
 				<CircleNotch size={32} className="animate-spin" />
 			)}
