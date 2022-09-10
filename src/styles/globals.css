@@ -5,23 +5,8 @@
 html,
 body {
   background: theme("colors.bastille.900");
-  color: theme("colors.gray.400");
+  color: theme("colors.white");
 }
 
-h1 {
-  color: theme("colors.gray.200");
-  font-size: theme("fontSize.4xl");
-}
-
-
-.sea{
-  background: linear-gradient(135deg, #00D9C0 0%, #00CBCB 35.4%, #00BCD8 69.8%, #00A8E8 100% );
-}
-/* .shadow-1{
-  text-shadow: 0px 2px 10px rgba(0, 0, 0, 0.5);
-}
-.shadow-2{
-  text-shadow: 0px -5px 6px rgba(0, 0, 0, 0.25);
-} */
 
 

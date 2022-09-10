@@ -3,7 +3,7 @@ import Head from "next/head";
 
 import { useState } from "react";
 import { ChallengerType } from "../../models/Challenger";
-import { CardChallenger } from "../components/CardChallenger";
+import { CardChallenger } from "../../components/CardChallenger";
 import { prismicClient } from "../../services/prismicClient";
 
 interface ChallengersProps {
