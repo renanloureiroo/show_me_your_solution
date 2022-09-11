@@ -1,5 +1,6 @@
 import Image from "next/image";
-import { useSession, signOut, signIn } from "next-auth/react";
+import { useSession } from "next-auth/react";
+import { UserCircle } from "phosphor-react";
 interface AvatarProps {
   width?: number;
   height?: number;
@@ -26,7 +27,7 @@ export const Avatar = ({ width, height }: AvatarProps) => {
 
   return(
     <>
-    
+      <UserCircle className="text-white" size={32} weight="thin" />
     </>
   )
 };

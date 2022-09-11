@@ -1,18 +1,19 @@
 import * as React from "react";
 import Box from "@mui/material/Box";
 import Menu from "@mui/material/Menu";
-import MenuItem from "@mui/material/MenuItem";
-import ListItemIcon from "@mui/material/ListItemIcon";
-import Divider from "@mui/material/Divider";
+import { useRouter } from "next/router";
 import IconButton from "@mui/material/IconButton";
 import Tooltip from "@mui/material/Tooltip";
-import { useRouter } from "next/router";
 
-import { Books, AddressBook, House } from "phosphor-react";
+import { useSession, signOut, signIn } from "next-auth/react";
+
+import { House } from "phosphor-react";
 import { Avatar } from "./Avatar";
+import { ButtonAuthenticate } from "./ButtonAuthenticate";
 
 export const MenuUser = () => {
 	const router = useRouter();
+	const { data: session, status } = useSession();
 
 	const [anchorEl, setAnchorEl] = React.useState<null | HTMLElement>(null);
 
@@ -28,13 +29,14 @@ export const MenuUser = () => {
 
 	return (
 		<div className="flex items-center">
-
-			{
-				router.asPath !== '/' ?
-				<House className="transition-all opacity-20 cursor-pointer hover:opacity-80" size={25} onClick={() => router.push('/')} />
-				: null
-			}
-			
+			{router.asPath !== "/" ? (
+				<House
+					className="transition-all opacity-20 cursor-pointer hover:opacity-80"
+					size={25}
+					weight="thin"
+					onClick={() => router.push("/")}
+				/>
+			) : null}
 
 			<Box>
 				<Tooltip title="Conta">
@@ -85,20 +87,8 @@ export const MenuUser = () => {
 				transformOrigin={{ horizontal: "right", vertical: "top" }}
 				anchorOrigin={{ horizontal: "right", vertical: "bottom" }}
 			>
-				<MenuItem>Minha conta</MenuItem>
-				<Divider />
-				<MenuItem>
-					<ListItemIcon>
-						<AddressBook size={22} />
-					</ListItemIcon>
-					Meus Desafios
-				</MenuItem>
-				<MenuItem onClick={() => router.push('/challengers')}>
-					<ListItemIcon>
-						<Books size={22} />
-					</ListItemIcon>
-					Desafios
-				</MenuItem>
+			
+
 			</Menu>
 		</div>
 	);

@@ -10,9 +10,9 @@ export const ButtonAuthenticate = () => {
   return (
 		<button className="flex items-center jus">
 			{status === "unauthenticated" ? (
-				<SignIn onClick={() => signIn()} size={22} className={style.button} />
+				<SignIn onClick={() => signIn()} size={22} weight="thin" className={style.button} />
 			) : status === "authenticated" ? (
-				<SignOut  onClick={() => signOut()} size={22} className={style.button}/>
+				<SignOut  onClick={() => signOut()} size={22} weight="thin"  className={style.button}/>
 			) : (
 				<CircleNotch size={32} className="animate-spin" />
 			)}

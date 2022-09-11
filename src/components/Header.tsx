@@ -1,4 +1,4 @@
-import { ButtonAuthenticate } from "./ButtonAuthenticate";
+
 
 import { LogoInput } from "./Logo";
 import { MenuUser } from "./MenuUser";
@@ -13,7 +13,6 @@ export const Header = () => {
 
 				<div className="flex space-x-2">
 					<MenuUser />
-					<ButtonAuthenticate/>
 				</div>
 			</div>
 		</header>
