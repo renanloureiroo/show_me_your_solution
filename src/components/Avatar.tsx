@@ -12,9 +12,9 @@ export const Avatar = ({ width, height }: AvatarProps) => {
 
   if(status === "authenticated"){
     return (
-      <div className="h-8 w-8 flex items-center justify-center rounded-full  overflow-hidden">
+      <div className="flex items-center justify-center">
         <Image
-          className="rounded-full overflow-hidden"
+          className="rounded-full"
           src={data?.user?.image!}
           alt="Avatar"
           width={width!}

@@ -5,11 +5,12 @@ import { useRouter } from "next/router";
 import IconButton from "@mui/material/IconButton";
 import Tooltip from "@mui/material/Tooltip";
 
-import { useSession, signOut, signIn } from "next-auth/react";
+import { useSession } from "next-auth/react";
 
 import { House } from "phosphor-react";
 import { Avatar } from "./Avatar";
-import { ButtonAuthenticate } from "./ButtonAuthenticate";
+
+import { MenuItems } from './MenuItems';
 
 export const MenuUser = () => {
 	const router = useRouter();
@@ -48,7 +49,7 @@ export const MenuUser = () => {
 						aria-haspopup="true"
 						aria-expanded={open ? "true" : undefined}
 					>
-						<Avatar width={40} height={40} />
+						<Avatar width={35} height={35} />
 					</IconButton>
 				</Tooltip>
 			</Box>
@@ -87,7 +88,7 @@ export const MenuUser = () => {
 				transformOrigin={{ horizontal: "right", vertical: "top" }}
 				anchorOrigin={{ horizontal: "right", vertical: "bottom" }}
 			>
-			
+			<MenuItems/>
 
 			</Menu>
 		</div>
