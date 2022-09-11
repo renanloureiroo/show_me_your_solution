@@ -12,25 +12,16 @@ const Challenger: NextPage<ChallengerProps> = ({ challenger }) => {
   return (
     <>
       <Head>
-        <title>Challengers | </title>
+        <title>SYS | {challenger.title}</title>
       </Head>
-      <div className="space-y-8">
-        <Image
-          src={challenger.banner.url}
-          width={challenger.banner.width}
-          height={challenger.banner.height}
-          alt={challenger.banner.alt}
-          layout="responsive"
-          className="shadow-md"
-        />
-        <main className="w-full max-w-5xl mx-auto space-y-4">
-          <h1 className="text-4xl">{challenger.title}</h1>
+      <div className="w-full container pt-36 mx-auto h-screen">
+        <main className="space-y-4">
+          <h1 className="text-7xl ">{challenger.title}</h1>
 
           <p className="">{challenger.description}</p>
 
           <section></section>
         </main>
-        |
       </div>
     </>
   );

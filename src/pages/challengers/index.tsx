@@ -18,20 +18,25 @@ const Challengers: NextPage<ChallengersProps> = ({ challengers }) => {
       <Head>
         <title>Show Me Your Solution | Home</title>
       </Head>
-      <div>
-        <h1>Show me your solution</h1>
-        <main className="flex w-full max-w-5xl mx-auto">
-          {data.map((challenger) => (
-            <CardChallenger
-              key={challenger.id}
-              data={{
-                ...challenger,
-                image: challenger.thumbnail,
-              }}
-            />
-          ))}
-        </main>
-      </div>
+      
+      <main className="container mx-auto  w-full  h-screen pt-36 p-10">
+        <span>Desafios</span>
+        <div className="border border-bastille-600 rounded-2xl bg-blackOpacity  h-[80vh] mb-40">
+          <div className="flex space-x-10 justify-center m-10 lg:justify-start">
+            {data.map((challenger) => (
+              <CardChallenger
+                key={challenger.id}
+                data={{
+                  ...challenger,
+                  image: challenger.thumbnail,
+                }}
+              />
+            ))}
+            
+          </div>
+          
+        </div>
+      </main>
     </>
   );
 };

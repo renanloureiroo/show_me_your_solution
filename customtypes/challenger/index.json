@@ -5,6 +5,13 @@
   "status": true,
   "json": {
     "Main": {
+      "description": {
+        "type": "Text",
+        "config": {
+          "label": "description",
+          "placeholder": ""
+        }
+      },
       "uid": {
         "type": "UID",
         "config": {
@@ -31,7 +38,10 @@
         "type": "Image",
         "config": {
           "label": "thumbnail",
-          "constraint": {},
+          "constraint": {
+            "width": null,
+            "height": 600
+          },
           "thumbnails": []
         }
       },
@@ -39,15 +49,11 @@
         "type": "Image",
         "config": {
           "label": "banner",
-          "constraint": {},
+          "constraint": {
+            "width": null,
+            "height": null
+          },
           "thumbnails": []
-        }
-      },
-      "description": {
-        "type": "Text",
-        "config": {
-          "label": "description",
-          "placeholder": ""
         }
       }
     }

@@ -19,7 +19,8 @@ module.exports = {
           900: '#18161F',
         },
         green: '#00d9c0',
-        blue: '#00a8e8'
+        blue: '#00a8e8',
+        blackOpacity: 'rgba(0, 0, 0, 0.21);'
       },
       backgroundImage:{
         'blur': "url('/blur.png')",
