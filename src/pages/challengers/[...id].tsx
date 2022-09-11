@@ -1,14 +1,29 @@
 import { GetServerSideProps, NextPage } from "next";
+import { useSession } from "next-auth/react";
 import Head from "next/head";
 import Link from "next/link";
 import { ChallengerType } from "../../models/Challenger";
 import { prismicClient } from "../../services/prismicClient";
-
+import { useRouter } from "next/router";
+import { useEffect } from "react";
 interface ChallengerProps {
 	challenger: ChallengerType;
 }
 
+
+
 const Challenger: NextPage<ChallengerProps> = ({ challenger }) => {
+	const { status, data } = useSession();
+	const router = useRouter();
+
+	const session = (status: any) =>{
+		if(status === "unauthenticated"){
+			router.push('/')
+			return
+		}
+	}
+	session(status)
+
 	return (
 		<>
 			<Head>
@@ -22,7 +37,7 @@ const Challenger: NextPage<ChallengerProps> = ({ challenger }) => {
 						<p className="text-lg">{challenger.description}</p>
 
 						<Link href={challenger.challenger_in_course.url}>
-							<a target="_blank" className="font-roboto font-light transition-all hover:underline hover:text-green">
+							<a className="font-roboto font-light transition-all hover:underline hover:text-green">
 								Link para o vídeo do desafio
 							</a>
 						</Link>

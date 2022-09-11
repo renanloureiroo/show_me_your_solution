@@ -1,5 +1,7 @@
 import type { GetStaticProps, NextPage } from "next";
 import Head from "next/head";
+import { useRouter } from "next/router";
+import { useSession } from "next-auth/react";
 
 import { useState } from "react";
 import { ChallengerType } from "../../models/Challenger";
@@ -12,6 +14,18 @@ interface ChallengersProps {
 
 const Challengers: NextPage<ChallengersProps> = ({ challengers }) => {
   const [data] = useState<ChallengerType[]>(challengers);
+	const { status, } = useSession();
+	const router = useRouter();
+
+	
+	const session = (status: any) =>{
+		if(status === "unauthenticated"){
+			router.push('/')
+		}
+
+    return
+	}
+	session(status)
 
   return (
     <>
