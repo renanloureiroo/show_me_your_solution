@@ -5,14 +5,7 @@ import MenuItem from "@mui/material/MenuItem";
 import ListItemIcon from "@mui/material/ListItemIcon";
 import Divider from "@mui/material/Divider";
 
-import {
-	Books,
-	AddressBook,
-	House,
-	SignIn,
-	CircleNotch,
-	SignOut,
-} from "phosphor-react";
+import { Books, AddressBook, SignIn, CircleNotch, SignOut } from "phosphor-react";
 
 export const MenuItems = () => {
 	const router = useRouter();
