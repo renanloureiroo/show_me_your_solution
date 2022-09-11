@@ -6,21 +6,36 @@ import ListItemIcon from "@mui/material/ListItemIcon";
 import Divider from "@mui/material/Divider";
 import IconButton from "@mui/material/IconButton";
 import Tooltip from "@mui/material/Tooltip";
+import { useRouter } from "next/router";
 
-import { Books, AddressBook } from "phosphor-react";
+import { Books, AddressBook, House } from "phosphor-react";
 import { Avatar } from "./Avatar";
 
 export const MenuUser = () => {
+	const router = useRouter();
+
 	const [anchorEl, setAnchorEl] = React.useState<null | HTMLElement>(null);
+
 	const open = Boolean(anchorEl);
+
 	const handleClick = (event: React.MouseEvent<HTMLElement>) => {
 		setAnchorEl(event.currentTarget);
 	};
+
 	const handleClose = () => {
 		setAnchorEl(null);
 	};
+
 	return (
-		<div>
+		<div className="flex items-center">
+
+			{
+				router.asPath !== '/' ?
+				<House className="transition-all opacity-20 cursor-pointer hover:opacity-80" size={25} onClick={() => router.push('/')} />
+				: null
+			}
+			
+
 			<Box>
 				<Tooltip title="Conta">
 					<IconButton
@@ -70,8 +85,7 @@ export const MenuUser = () => {
 				transformOrigin={{ horizontal: "right", vertical: "top" }}
 				anchorOrigin={{ horizontal: "right", vertical: "bottom" }}
 			>
-				<MenuItem>Profile</MenuItem>
-				<MenuItem>My account</MenuItem>
+				<MenuItem>Minha conta</MenuItem>
 				<Divider />
 				<MenuItem>
 					<ListItemIcon>
@@ -79,7 +93,7 @@ export const MenuUser = () => {
 					</ListItemIcon>
 					Meus Desafios
 				</MenuItem>
-				<MenuItem>
+				<MenuItem onClick={() => router.push('/challengers')}>
 					<ListItemIcon>
 						<Books size={22} />
 					</ListItemIcon>

@@ -2,7 +2,10 @@
 import Head from "next/head";
 import { TeamPicture } from "../components/TeamPic";
 
+
+
 export default function Home(){
+
   return(
     <>
       <Head>
