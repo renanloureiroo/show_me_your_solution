@@ -7,7 +7,7 @@ import Tooltip from "@mui/material/Tooltip";
 
 import { useSession } from "next-auth/react";
 
-import { House } from "phosphor-react";
+import { House, UserCircle } from "phosphor-react";
 import { Avatar } from "./Avatar";
 
 import { MenuItems } from './MenuItems';
@@ -51,7 +51,7 @@ export const MenuUser = () => {
 					>
 						
 						<span className="rounded-full border-2 border-bastille-100">
-							<Avatar width={35} height={35} size={35}/>
+							{status === 'authenticated' ? <Avatar width={35} height={35} size={35}/> : <UserCircle size={35} className='text-white' weight="thin" />}
 						</span>
 
 					</IconButton>

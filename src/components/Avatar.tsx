@@ -8,9 +8,9 @@ interface AvatarProps {
 }
 
 export const Avatar = ({ width, height, size }: AvatarProps) => {
+	
 	const { data: session, status } = useSession();
 
-	console.log(status);
 	return (
 		<div className="flex items-center justify-center p-1">
 			{status === "loading" ? (
