@@ -46,9 +46,9 @@ export const MenuItems = () => {
 				
 				</>
 			) : status === "unauthenticated" ? (
-				<MenuItem >
-					<Login/>
-				</MenuItem>
+	
+				<Login/>
+
 			) : (
 				<CircleNotch size={32} className="animate-spin" />
 			)}
