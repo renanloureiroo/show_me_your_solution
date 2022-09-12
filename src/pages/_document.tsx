@@ -1,7 +1,7 @@
 import { Html, Head, Main, NextScript } from "next/document";
 
 export default function Document() {
-  return (
+    return (
     <Html lang="pt-BR">
       <Head>
         <link rel="icon" href="/favicon.png" type="image" />

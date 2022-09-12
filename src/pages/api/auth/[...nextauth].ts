@@ -1,6 +1,7 @@
 import NextAuth from "next-auth";
 import GithubProvider from "next-auth/providers/github";
 
+import { Router } from "next/router";
 import { query as q } from "faunadb";
 import { faunadbClient } from "../../../services/faunadb";
 import { FaunaAdapter } from "@next-auth/fauna-adapter"

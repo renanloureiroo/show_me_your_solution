@@ -49,7 +49,11 @@ export const MenuUser = () => {
 						aria-haspopup="true"
 						aria-expanded={open ? "true" : undefined}
 					>
-						<Avatar width={35} height={35} />
+						
+						<span className="rounded-full border-2 border-bastille-100">
+							<Avatar width={35} height={35} size={35}/>
+						</span>
+
 					</IconButton>
 				</Tooltip>
 			</Box>
