@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-import { ImageType } from "../../models/Image";
+import { ImageType } from "../models/Image";
 
 interface CardChallengerProps {
   data: {
@@ -15,22 +15,17 @@ interface CardChallengerProps {
 export const CardChallenger = ({ data }: CardChallengerProps) => {
   return (
     <Link href={`/challengers/${data.id}`}>
-      <div className="rounded-lg sea cursor-pointer shadow-xl border  border-zinc-700 hover:border-green hover:-translate-y-1 hover:scale-110 duration-300">
-        
+      <div className="rounded-lg bg-green cursor-pointer shadow-xl border  border-zinc-700 hover:border-green hover:-translate-y-1 hover:scale-110 duration-300">
         <div className="flex justify-center">
             <Image
               className="w-full z-20 rounded-tl-[66px] rounded-br-[77px] rounded-md"
               src={data.image.url}
-              // width={311}
-              // height={174}
-              width={data.image.width}
-              height={data.image.height}
+              width={350}
+              height={200}
               alt={data.image.alt}
               layout="fixed"
             />
         </div>
-        {/* <h1>{data.title}</h1>
-        <p>{data.description}</p> */}
       </div>
     </Link>
   );

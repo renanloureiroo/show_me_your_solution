@@ -1,5 +1,5 @@
 {
-  "apiEndpoint": "https://showmeyoursolution.prismic.io/api/v2",
+  "apiEndpoint": "https://showme-your-solution.prismic.io/api/v2",
   "libraries": [
     "@/slices"
   ],

@@ -6,6 +6,6 @@ export type ChallengerType = {
   description: string;
   banner: ImageType;
   thumbnail: ImageType;
-  challenger_in_course: string;
+  challenger_in_course: any;
   slug: string;
 };

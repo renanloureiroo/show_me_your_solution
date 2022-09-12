@@ -1,9 +1,11 @@
 import type { GetStaticProps, NextPage } from "next";
 import Head from "next/head";
+import { useRouter } from "next/router";
+import { useSession } from "next-auth/react";
 
 import { useState } from "react";
 import { ChallengerType } from "../../models/Challenger";
-import { CardChallenger } from "../components/CardChallenger";
+import { CardChallenger } from "../../components/CardChallenger";
 import { prismicClient } from "../../services/prismicClient";
 
 interface ChallengersProps {
@@ -12,26 +14,43 @@ interface ChallengersProps {
 
 const Challengers: NextPage<ChallengersProps> = ({ challengers }) => {
   const [data] = useState<ChallengerType[]>(challengers);
+	const { status, } = useSession();
+	const router = useRouter();
+
+	
+	const session = (status: any) =>{
+		if(status === "unauthenticated"){
+			router.push('/')
+		}
+
+    return
+	}
+	session(status)
 
   return (
     <>
       <Head>
         <title>Show Me Your Solution | Home</title>
       </Head>
-      <div>
-        <h1>Show me your solution</h1>
-        <main className="flex w-full max-w-5xl mx-auto">
-          {data.map((challenger) => (
-            <CardChallenger
-              key={challenger.id}
-              data={{
-                ...challenger,
-                image: challenger.thumbnail,
-              }}
-            />
-          ))}
-        </main>
-      </div>
+      
+      <main className="transition-all container mx-auto  w-full  h-screen pt-36 p-10">
+        <span>Desafios</span>
+        <div className="transition-all border border-bastille-600 rounded-2xl bg-blackOpacity  h-[80vh] mb-40">
+          <div className="transition-all flex  space-y-10 justify-center m-10 lg:justify-start flex-wrap lg:space-x-10 lg:space-y-0">
+            {data.map((challenger) => (
+              <CardChallenger
+                key={challenger.id}
+                data={{
+                  ...challenger,
+                  image: challenger.thumbnail,
+                }}
+              />
+            ))}
+            
+          </div>
+          
+        </div>
+      </main>
     </>
   );
 };
