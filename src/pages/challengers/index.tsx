@@ -33,10 +33,10 @@ const Challengers: NextPage<ChallengersProps> = ({ challengers }) => {
         <title>Show Me Your Solution | Home</title>
       </Head>
       
-      <main className="transition-all container mx-auto  w-full  h-screen pt-36 p-10">
+      <main className="transition-all container mx-auto  w-full  h-screen pt-36">
         <span>Desafios</span>
         <div className="transition-all border border-bastille-600 rounded-2xl bg-blackOpacity-1  h-[80vh] mb-40">
-          <div className="transition-all flex  space-y-10 justify-center m-10 lg:justify-start flex-wrap lg:space-x-10 lg:space-y-0">
+          <div className=" transition-all flex  space-y-10 justify-center m-10 lg:justify-start flex-wrap lg:space-x-10 lg:space-y-0">
             {data.map((challenger) => (
               <CardChallenger
                 key={challenger.id}
