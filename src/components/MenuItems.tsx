@@ -41,9 +41,9 @@ export const MenuItems = () => {
 						Desafios
 					</MenuItem>
 
-					<MenuItem >
-						<Logout/>
-					</MenuItem>
+				
+					<Logout/>
+				
 				</>
 			) : status === "unauthenticated" ? (
 				<MenuItem >

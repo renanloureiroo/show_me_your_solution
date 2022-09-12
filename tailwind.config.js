@@ -20,7 +20,11 @@ module.exports = {
         },
         green: '#00d9c0',
         blue: '#00a8e8',
-        blackOpacity: 'rgba(0, 0, 0, 0.21);'
+        blackOpacity: {
+          1:'rgba(0, 0, 0, 0.21)',
+          2:'rgba(0, 0, 0, 0.04)'
+        }
+        
       },
       backgroundImage:{
         'blur': "url('/blur.png')",

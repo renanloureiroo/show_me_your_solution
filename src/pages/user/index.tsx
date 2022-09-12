@@ -20,7 +20,7 @@ const User = () => {
 						</span>
 					</div>
 
-					<div className="bg-blackOpacity h-[600px]   md:flex-1">a</div>
+					<div className="bg-blackOpacity-1 h-[600px]   md:flex-1">a</div>
 				</>
 			)}
 		</main>
