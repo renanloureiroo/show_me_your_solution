@@ -11,31 +11,33 @@ export default function Home(){
       <Head>
         <title>Show me your solution</title>
       </Head>
-      <main className="pt-40 mb-10 h-screen mx-auto container flex flex-col text-center  lg:flex-row lg:text-start lg:items-center lg:pt-24 lg:pl-12">
-        
-        <div className="flex-1 space-y-7 ">
+    
+      <main className="pt-20 h-screen"> {/* Container */}
 
-          <span className="text-base font-roboto font-light text-gray-500 tracking-[0.2rem]">BOAS-VINDAS AO 👋</span>
+          <div className="container mx-auto flex h-5/6 items-center">
 
-          <div className="flex flex-col">
-            <span className="font-bold  font-space transition-all text-7xl 2xl:text-9xl">Show me</span>
-            <span className="font-light font-space tracking-[0.5em] transition-all xl:text-3xl xl:tracking-[0.33em] 2xl:text-5xl"> Your solution</span>
+            <div className="w-6/12 h-64 flex-1 ">
+              
+              <div className="h-44">
+                <span className="text-lg pb-2">BOAS-VINDAS AO 👋</span>
+                <h1 className="text-7xl font-bold">Show me you</h1>
+                <h2 className="text-5xl tracking-[1.4rem]">you solutin</h2>
+              </div>
+
+              <p className="h-36 flex font-light items-center text-3xl tracking-wider">
+                Bem-vindo(a) ao Show Me Your Solution, 
+                aqui você poderá compartilha todo os seu 
+                desafios e exercícios com a comunidade 
+                da Codar.me
+              </p>
+
+            </div>
+
+            <div className="flex justify-center  w-6/12">
+              <TeamPicture width={418} height={412}/>
+            </div>
           </div>
-
-          <div className="transition-all flex items-center p-9 justify-center  md:p-0 lg:justify-start">
-            <p className="transition-all w-[500px] font-roboto text-[1.2rem] font-light md:text-2xl lg:text-lg  tracking-[0.1em] leading-tight">
-              Bem-vindo(a) Show Me Your Solution, aqui você
-              poderar compartilhat todo os seu desafios e 
-              exercícios com a comunidade da Codar.me
-            </p>
-          </div>
-
-        </div>
-
-        <div className="flex items-center justify-center lg:w-6/12 pl-12 lg:pl-0">
-            <TeamPicture />
-        </div>
-
+          
       </main>
 
     </>
