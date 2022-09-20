@@ -1,11 +1,13 @@
 interface TeamPictureProps {
-  width?: number;
-  height?: number;
+  width: number;
+  height: number;
+  styles: string;
 }
-export const TeamPicture = ({ width, height }: TeamPictureProps) => (
+export const TeamPicture = ({ width, height, styles }: TeamPictureProps) => (
   <svg
     width={width}
     height={height}
+    className={styles}
     viewBox="0 0 418 412"
     fill="none"
   >

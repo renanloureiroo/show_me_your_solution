@@ -4,6 +4,7 @@
 
 html,
 body {
+  font-family: theme('fontFamily.sans');
   background: theme("colors.bastille.900");
   color: theme("colors.white");
 }

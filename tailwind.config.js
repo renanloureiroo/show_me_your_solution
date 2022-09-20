@@ -32,6 +32,7 @@ module.exports = {
       },
       
       fontFamily: {
+        'sans': ['DM Sans', 'sans-serif'],
         'space': ['Space Grotesk', 'system-ui'],
         'roboto': ['Roboto', 'system-ui']
       }
