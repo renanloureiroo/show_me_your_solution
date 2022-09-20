@@ -1,7 +1,7 @@
 interface TeamPictureProps {
   width: number;
   height: number;
-  styles: string;
+  styles?: string;
 }
 export const TeamPicture = ({ width, height, styles }: TeamPictureProps) => (
   <svg
