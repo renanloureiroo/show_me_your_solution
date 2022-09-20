@@ -19,7 +19,7 @@ export default function Home(){
             <div className="transition-all  flex-1 flex  flex-col  justify-center text-center xl:pl-10 xl:w-6/12 xl:text-start xl:h-64 xl:block">
               
               <div className="transition-all h-44 flex flex-col">
-                <span className="text-lg pb-2">BOAS-VINDAS AO 👋</span>
+                <span className="text-lg pb-2 tracking-widest">BOAS-VINDAS AO 👋</span>
                 <h1 className="text-6xl xl:text-7xl font-bold">Show me you</h1>
                 <h2 className="text-5xl xl:text-5xl xl:tracking-[1.1rem]">you solutoin</h2>
               </div>
