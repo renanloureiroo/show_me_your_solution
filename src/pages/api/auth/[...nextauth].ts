@@ -1,7 +1,7 @@
 import NextAuth from "next-auth";
 import GithubProvider from "next-auth/providers/github";
 
-import { Router } from "next/router";
+
 import { query as q } from "faunadb";
 import { faunadbClient } from "../../../services/faunadb";
 import { FaunaAdapter } from "@next-auth/fauna-adapter"
@@ -29,7 +29,7 @@ export default NextAuth({
                 q.Match(q.Index("user_by_email"), q.Casefold(user.email!))
               )
             ),
-
+              
             q.Create(q.Collection("users"), {
               data: {
                 email,

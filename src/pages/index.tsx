@@ -15,7 +15,7 @@ export default function Home(){
         
         <div className="flex-1 space-y-7 ">
 
-          <span className="text-base font-roboto font-light text-gray-500 tracking-[0.2rem]">BEM-VINDOS(A) AO👋</span>
+          <span className="text-base font-roboto font-light text-gray-500 tracking-[0.2rem]">BOAS-VINDAS AO 👋</span>
 
           <div className="flex flex-col">
             <span className="font-bold  font-space transition-all text-7xl 2xl:text-9xl">Show me</span>
