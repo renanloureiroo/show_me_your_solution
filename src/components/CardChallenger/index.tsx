@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-import { ImageType } from "../models/Image";
+import { ImageType } from "../../models/Image";
 
 interface CardChallengerProps {
   data: {

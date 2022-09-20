@@ -1,5 +1,5 @@
-import { LogoShowMeYouSolution } from "./LogoShowMeYouSolution";
-import { MenuUser } from "./MenuUser";
+import { LogoShowMeYouSolution } from "../LogoShowMeYouSolution";
+import { MenuUser } from "../MenuUser/MenuUser";
 
 export const Header = () => {
 

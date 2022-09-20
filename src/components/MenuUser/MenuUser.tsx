@@ -8,7 +8,7 @@ import Tooltip from "@mui/material/Tooltip";
 import { useSession } from "next-auth/react";
 
 import { House, UserCircle } from "phosphor-react";
-import { Avatar } from "./Avatar";
+import { Avatar } from "../Avatar";
 
 import { MenuItems } from './MenuItems';
 

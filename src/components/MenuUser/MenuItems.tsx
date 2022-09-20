@@ -7,8 +7,8 @@ import Divider from "@mui/material/Divider";
 
 import { Books, AddressBook,  CircleNotch, UserCircle  } from "phosphor-react";
 
-import { Login } from "./Login";
-import { Logout } from "./Logout";
+import { Login } from "../ButtoAuthenticate/Login";
+import { Logout } from "../ButtoAuthenticate/Logout";
 
 export const MenuItems = () => {
 	const router = useRouter();
