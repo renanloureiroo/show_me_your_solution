@@ -20,8 +20,8 @@ export default function Home(){
               
               <div className="transition-all h-44 flex flex-col">
                 <span className="text-lg pb-2 tracking-widest opacity-80 font-roboto font-light">BOAS-VINDAS AO 👋</span>
-                <h1 className="text-6xl xl:text-8xl font-bold">Show me you</h1>
-                <h2 className="text-5xl xl:text-5xl xl:tracking-[1.1rem]">you solutoin</h2>
+                <h1 className="text-6xl 2xl:text-8xl font-bold">Show me you</h1>
+                <h2 className="font-roboto font-light text-4xl 2xl:text-5xl xl:tracking-[1.1rem]">you solutoin</h2>
               </div>
 
               <p className="transition-all h-44 px-4 flex font-light items-center text-xl md:text-2xl xl:px-0 xl:text-2xl xl:tracking-widest">
@@ -34,7 +34,7 @@ export default function Home(){
             </div>
 
             <div className="transition-all flex justify-center   md:w-6/12">
-              <TeamPicture width={418} height={412} styles='blur-md invert drop-shadow-xl md:filter-none'/>
+              <TeamPicture width={418} height={412} styles='drop-shadow-xl'/>
             </div>
           </div>
           
