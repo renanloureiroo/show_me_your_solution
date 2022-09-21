@@ -45,8 +45,11 @@ export default NextAuth({
         return false;
       }
     },
-
-
+  },
+  session: {
+    strategy: "jwt", // jwt0
+    maxAge: 1 * 60, // 3 days session
+    updateAge: 24 * 60 * 60, // 24h validation session
   },
   adapter: FaunaAdapter(faunadbClient),
   secret: process.env.NEXTAUTH_SECRET,
