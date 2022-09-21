@@ -1,7 +1,7 @@
 
 import Head from "next/head";
 import { TeamPicture } from "../components/TeamPic";
-import { styles } from './Home.styles'
+import { styles } from '../styles/home'
 
 
 export default function Home(){
