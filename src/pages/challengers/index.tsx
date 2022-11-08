@@ -32,21 +32,23 @@ const Challengers: NextPage<ChallengersProps> = ({ challengers }) => {
   return (
     <>
       <Head>
-        <title>Show Me Your Solution | Home</title>
+        <title>SMYS | Desafios</title>
       </Head>
-      {status === "loading" 
+      {status === "loading"
 			?
 				<div className="w-full h-screen flex items-center justify-center">
           <CircleNotch size={142} className="animate-spin" />
         </div>
-			
+
 			:  status === "authenticated" ? (
-        <main className="transition-all container mx-auto  w-full  h-screen pt-28 text-center">
+        <main className="transition-all container mx-auto  w-full  min-h-screen pt-28 text-center mb-10">
 
-          <span className="text-3xl font-semibold font-sans">Desafios</span>
 
-          <div className="transition-all border border-bastille-600 rounded-2xl bg-blackOpacity-1  h-[80vh] mb-40">
+
+          <div className="transition-all border border-bastille-600 rounded-2xl bg-bastille-300/[0.1] mx-6">
+          <div className="h-20 flex justify-center items-center text-3xl font-semibold font-sans">Desafios</div>
             <div className=" transition-all flex  space-y-10 justify-center m-10 lg:justify-start flex-wrap lg:space-x-10 lg:space-y-0">
+
               {data.map((challenger) => (
                 <CardChallenger
                   key={challenger.id}
@@ -56,11 +58,12 @@ const Challengers: NextPage<ChallengersProps> = ({ challengers }) => {
                   }}
                 />
               ))}
+
             </div>
           </div>
         </main>
-      ) 				
-      : 
+      )
+      :
         <div className="h-screen pt-24 flex flex-col items-center justify-center">
           <span className="text-2xl">Você não está logado!</span>
           <CircleNotch size={40} className="animate-spin text-white" />
