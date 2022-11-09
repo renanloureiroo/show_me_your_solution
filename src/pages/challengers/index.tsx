@@ -11,6 +11,8 @@ import { prismicClient } from "../../services/prismicClient";
 
 import { Login } from "../../components/ButtoAuthenticate/Login";
 
+import { Loading } from "../../components/Loading"
+
 interface ChallengersProps {
   challengers: ChallengerType[];
 }
@@ -36,16 +38,15 @@ const Challengers: NextPage<ChallengersProps> = ({ challengers }) => {
       </Head>
       {status === "loading"
 			?
-				<div className="w-full h-screen flex items-center justify-center">
-          <CircleNotch size={142} className="animate-spin" />
-        </div>
+
+        <Loading/>
 
 			:  status === "authenticated" ? (
-        <main className="transition-all container mx-auto  w-full  min-h-screen pt-28 text-center mb-10">
+        <main className="transition-all mx-auto flex items-center flex-col  min-h-screen pt-28 text-center mb-10">
 
 
 
-          <div className="transition-all border border-bastille-600 rounded-2xl bg-bastille-300/[0.1] mx-6">
+          <div className="transition-all border border-bastille-600 rounded-2xl bg-bastille-700/[0.4] mx-6 container ">
           <div className="h-20 flex justify-center items-center text-3xl font-semibold font-sans">Desafios</div>
             <div className=" transition-all flex  space-y-10 justify-center m-10 lg:justify-start flex-wrap lg:space-x-10 lg:space-y-0">
 

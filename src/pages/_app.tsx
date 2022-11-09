@@ -9,10 +9,10 @@ import { Footer } from "../components/Footer";
 function MyApp({ Component, pageProps: { session, ...pageProps } }: AppProps) {
 
   return (
-    <SessionProvider session={session}>
+    <SessionProvider session={session} >
       < Header/>
       <Component {...pageProps} />
-      {/* <Footer/>     */}
+      <Footer/>
     </SessionProvider>
   );
 }
