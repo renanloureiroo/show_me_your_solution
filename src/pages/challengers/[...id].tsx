@@ -5,7 +5,8 @@ import Link from "next/link";
 import { ChallengerType } from "../../models/Challenger";
 import { prismicClient } from "../../services/prismicClient";
 import { useRouter } from "next/router";
-import { useEffect } from "react";
+
+
 interface ChallengerProps {
 	challenger: ChallengerType;
 }
@@ -13,7 +14,9 @@ interface ChallengerProps {
 
 
 const Challenger: NextPage<ChallengerProps> = ({ challenger }) => {
+
 	const { status, data } = useSession();
+
 	const router = useRouter();
 
 	const session = (status: any) =>{
@@ -26,26 +29,48 @@ const Challenger: NextPage<ChallengerProps> = ({ challenger }) => {
 
 	return (
 		<>
+
 			<Head>
 				<title>SYS | {challenger.title}</title>
 			</Head>
-			<div className=" container pt-40 mx-auto h-screen">
-				<main className="space-y-4">
-					<header className="space-y-6">
-						<h1 className="text-7xl font-semibold">{challenger.title}</h1>
 
-						<p className="text-lg">{challenger.description}</p>
 
-						<Link href={challenger.challenger_in_course.url}>
-							<a className="font-roboto font-light transition-all hover:underline hover:text-green">
-								Link para o vídeo do desafio
+				<main className="space-y-7 container pt-40 mx-auto min-h-screen px-4 mb-4">
+
+					<header className="">
+						<span>Exercício</span>
+						<h1 className="text-4xl font-semibold ">{challenger.title}</h1>
+
+						<Link  href={challenger.challenger_in_course.url}>
+							<a className="transition-all uppercase text-bastille-100/[0.4] hover:text-bastille-100 hover:underline"  target='_blank'>
+								LINK DA AULA
 							</a>
 						</Link>
 					</header>
 
-					<section></section>
+
+
+
+
+					<section className="bg-bastille-700/[0.4] h-full p-4 rounded-2xl space-y-7">
+
+						<span className="font-bold underline text-xl">
+							Objetivo
+						</span>
+
+
+
+						<p className="text-lg">
+							{challenger.description}
+						</p>
+
+
+
+
+
+					</section>
 				</main>
-			</div>
+
 		</>
 	);
 };

@@ -1,7 +1,7 @@
 import NextAuth from "next-auth";
 import GithubProvider from "next-auth/providers/github";
 
-import { Router } from "next/router";
+
 import { query as q } from "faunadb";
 import { faunadbClient } from "../../../services/faunadb";
 import { FaunaAdapter } from "@next-auth/fauna-adapter"
@@ -12,8 +12,8 @@ export default NextAuth({
   },
   providers: [
     GithubProvider({
-      clientId: process.env.NEXT_PUBLIC_GITHUB_CLIENT_ID || "",
-      clientSecret: process.env.NEXT_PUBLIC_GITHUB_SECRET_KEY || "",
+      clientId: process.env.GITHUB_CLIENT_ID || "",
+      clientSecret: process.env.GITHUB_SECRET_KEY || "",
     }),
     // ...add more providers here
   ],
@@ -35,7 +35,7 @@ export default NextAuth({
                 email,
               },
             }),
-          
+
             q.Get(q.Match(q.Index("user_by_email"), q.Casefold(user.email!)))
           )
         );
@@ -45,8 +45,11 @@ export default NextAuth({
         return false;
       }
     },
-
-
+  },
+  session: {
+    strategy: "jwt", // jwt0
+    maxAge: 3 * 24 * 60 * 60, // 3 days session
+    updateAge: 24 * 60 * 60, // 24h validation session
   },
   adapter: FaunaAdapter(faunadbClient),
   secret: process.env.NEXTAUTH_SECRET,

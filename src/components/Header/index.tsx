@@ -1,22 +1,18 @@
-import { useRouter } from "next/router";
-import { LogoInput } from "./Logo";
-import { MenuUser } from "./MenuUser";
+import { LogoShowMeYouSolution } from "../LogoShowMeYouSolution";
+import { MenuUser } from "../MenuUser/MenuUser";
 
 export const Header = () => {
-
-	const router = useRouter()
 
 	return (
 		<header className="w-full transition-all absolute ">
 			<div className="flex items-center h-24 p-4 container mx-auto justify-between">
 				
-				<a className="cursor-pointer" onClick={ () =>router.push('/')} >
-					<LogoInput  width={150} />
-				</a>
+			<LogoShowMeYouSolution  width={150} height={150} url="/" />
 
 				<div className="flex space-x-2">
 					<MenuUser />
 				</div>
+
 
 			</div>
 		</header>

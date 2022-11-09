@@ -1,6 +1,7 @@
 import Image from "next/image";
 import { useSession } from "next-auth/react";
 import { CircleNotch } from "phosphor-react";
+
 interface AvatarProps {
 	width?: number;
 	height?: number;

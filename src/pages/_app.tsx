@@ -12,7 +12,7 @@ function MyApp({ Component, pageProps: { session, ...pageProps } }: AppProps) {
     <SessionProvider session={session}>
       < Header/>
       <Component {...pageProps} />
-      <Footer/>    
+      {/* <Footer/>     */}
     </SessionProvider>
   );
 }

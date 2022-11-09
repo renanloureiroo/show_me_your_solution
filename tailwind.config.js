@@ -20,7 +20,11 @@ module.exports = {
         },
         green: '#00d9c0',
         blue: '#00a8e8',
-        blackOpacity: 'rgba(0, 0, 0, 0.21);'
+        blackOpacity: {
+          1:'rgba(0, 0, 0, 0.21)',
+          2:'rgba(0, 0, 0, 0.04)'
+        }
+        
       },
       backgroundImage:{
         'blur': "url('/blur.png')",
@@ -28,6 +32,7 @@ module.exports = {
       },
       
       fontFamily: {
+        'sans': ['DM Sans', 'sans-serif'],
         'space': ['Space Grotesk', 'system-ui'],
         'roboto': ['Roboto', 'system-ui']
       }
