@@ -39,7 +39,7 @@ const Challengers: NextPage<ChallengersProps> = ({ challengers }) => {
       {status === "loading"
 			?
 
-        <Loading/>
+        <Loading size={60} />
 
 			:  status === "authenticated" ? (
         <main className="transition-all mx-auto flex items-center flex-col  min-h-screen pt-28 text-center mb-10">
